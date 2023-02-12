@@ -52,6 +52,11 @@
 
 /* Card styling */
 
+.cardContainer {
+  display: flex;
+  flex-direction: row;
+}
+
 .cost-description > * {
   margin: 0;
   text-align: left;
@@ -64,7 +69,6 @@
 .slider {
   padding-left: 2em;
   margin: 2em 0;
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
   justify-content: center;

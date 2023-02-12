@@ -1,18 +1,21 @@
-import katie from "../images/katie-zaferes.png"
+
 import star from "../images/star.png"
 
-export default function Card(){
+
+export default function Card(props){
+    
     return (
        <section className="slider">
-        <img src={katie} className="katie" alt="Katie Zaferes"/>
+        <img src={`../images/${props.card.coverImg}`} className="katie" alt="katie"/>
             <div className="rating-section">
                 <img src={star} className="red-star" alt="red star"/>
-                <p className="rating-text">5.0<span>(6)·USA</span></p>
+                <p className="rating-text">{props.card.stats.rating}<span>({props.card.stats.reviewCount})·{props.card.location}</span></p>
             </div>
             <div className="cost-description">
-                <p>Life lessons with Katie Zaferes</p>
-                <p className="cost"><span>From $136</span>/ person</p>
+                <p>{props.card.title}</p>
+                <p className="cost"><span>From ${props.card.price}</span>/ person</p>
             </div>
        </section>
     )
 }
+
